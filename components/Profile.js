@@ -8,6 +8,7 @@ import {
   Popover
 } from 'react-bootstrap'
 import styles from '../styles/Home.module.css'
+import Skills from './Skills'
 
 const Profile = ({ profile }) => {
   const popover = (
@@ -39,14 +40,7 @@ const Profile = ({ profile }) => {
             </Col>
             <Col className={styles.bioInfo}>
               🦾 &nbsp; Skills:
-              <div className={styles.skillSection}>
-                {profile.skills.map((skill, ind) => (
-                  <div className={styles.skills} key={ind}>
-                    <img src={skill.icon} />
-                    <p className={styles.skillTitle}>{skill.title}</p>
-                  </div>
-                ))}
-              </div>
+              <Skills skills={profile.skills} />
             </Col>
             <Col className={styles.bioInfo}>
               🧑🏻‍💻 &nbsp; Bio: <span>{profile.bio}</span>
