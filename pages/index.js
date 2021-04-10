@@ -14,7 +14,22 @@ export default function Home() {
     ],
     organization: 'Innoloft Gmbh',
     bio: ' Lorem, ipsum dolor sit amet consectetur adipisicing elit. Enim',
-    imgUrl: '/profile.jpg'
+    imgUrl: '/profile.jpg',
+    location: 'Remote',
+    skills: [
+      { title: 'ReactJS', icon: 'react.svg' },
+      { title: 'Redux', icon: 'redux.svg' },
+      { title: 'NextJS', icon: 'nextjs.svg' },
+      { title: 'ExpressJS', icon: 'express.svg' },
+      { title: 'NodeJS', icon: 'nodejs.svg' },
+      { title: 'JavaScript', icon: 'js.svg' },
+      { title: 'python', icon: 'python.svg' },
+      { title: 'MongoDb', icon: 'mongo.svg' },
+      { title: 'PostGreSql', icon: 'psql.svg' },
+      { title: 'Html5', icon: 'html.svg' },
+      { title: 'css3', icon: 'css.svg' },
+      { title: 'styled components', icon: 'styled.svg' }
+    ]
   }
 
   return (

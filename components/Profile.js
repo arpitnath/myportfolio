@@ -32,16 +32,27 @@ const Profile = ({ profile }) => {
             ))}
           </Col>
           <div className={styles.bio}>
-            <Col>
+            <Col className={styles.bioInfo}>
               🛠 &nbsp; working for:{' '}
               <span className={styles.org}>{profile.organization}</span>
+              &nbsp;{`${'(' + profile.location + ')'}`}
             </Col>
-            <Col> 🦾 &nbsp; Skills:</Col>
-            <Col>
+            <Col className={styles.bioInfo}>
+              🦾 &nbsp; Skills:
+              <div className={styles.skillSection}>
+                {profile.skills.map((skill, ind) => (
+                  <div className={styles.skills} key={ind}>
+                    <img src={skill.icon} />
+                    <p className={styles.skillTitle}>{skill.title}</p>
+                  </div>
+                ))}
+              </div>
+            </Col>
+            <Col className={styles.bioInfo}>
               🧑🏻‍💻 &nbsp; Bio: <span>{profile.bio}</span>
             </Col>
           </div>
-          <Col className={styles.btnLinks}>
+          <Col className={`${styles.btnLinks} ${styles.bioInfo}`}>
             <Link href='/projects'>
               <Button className={styles.btn}>Projects</Button>
             </Link>
