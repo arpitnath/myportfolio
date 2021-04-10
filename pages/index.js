@@ -13,7 +13,8 @@ export default function Home() {
       'http://arpitnath42@gmail.com'
     ],
     organization: 'Innoloft Gmbh',
-    imgUrl: '/vercel.svg'
+    bio: ' Lorem, ipsum dolor sit amet consectetur adipisicing elit. Enim',
+    imgUrl: '/profile.jpg'
   }
 
   return (

@@ -22,32 +22,37 @@ const Profile = ({ profile }) => {
   return (
     <Container>
       <Row>
-        <Col md={6}>
-          <Col>
+        <Col className={styles.content} md={6}>
+          <Col className={styles.role}>
+            <span>Hi there 😁 &nbsp;I'm</span>
             <h1>{profile.name}</h1>
+            <h5>{profile.role}</h5>
             {profile.social.map((p, i) => (
               <span key={i}>{p}</span>
             ))}
-            <h5>{profile.role}</h5>
           </Col>
           <div className={styles.bio}>
-            <Col>working for: {profile.organization}</Col>
-            <Col>Skills:</Col>
             <Col>
-              Lorem, ipsum dolor sit amet consectetur adipisicing elit. Enim,
-              nisi.
+              🛠 &nbsp; working for:{' '}
+              <span className={styles.org}>{profile.organization}</span>
+            </Col>
+            <Col> 🦾 &nbsp; Skills:</Col>
+            <Col>
+              🧑🏻‍💻 &nbsp; Bio: <span>{profile.bio}</span>
             </Col>
           </div>
-          <Col>
+          <Col className={styles.btnLinks}>
             <Link href='/projects'>
-              <Button>Projects</Button>
+              <Button className={styles.btn}>Projects</Button>
             </Link>
             <OverlayTrigger trigger='click' placement='right' overlay={popover}>
-              <Button variant='success'>Click me to see</Button>
+              <Button className={`${styles.btn} ${styles.resumeBtn}`}>
+                Click me to see
+              </Button>
             </OverlayTrigger>
           </Col>
         </Col>
-        <Col md={6}>
+        <Col className={styles.displayPicture} md={6}>
           <img src={profile.imgUrl} />
         </Col>
       </Row>

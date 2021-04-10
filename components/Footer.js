@@ -9,7 +9,8 @@ const Footer = () => {
         <Container>
           <Row>
             <Col className={`text-center py-3 ${styles.footerContent}`}>
-              © 2021 - All rights reserved. Made with ❤ by Arpit
+              © 2021 - All rights reserved. Made with{' '}
+              <span className={styles.heartSymb}>❤</span> by Arpit
             </Col>
           </Row>
         </Container>
