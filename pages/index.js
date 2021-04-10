@@ -27,6 +27,11 @@ export default function Home() {
           integrity='sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T'
           crossOrigin='anonymous'
         />
+        {/*@Fonts */}
+        <style>
+          @import
+          url('https://fonts.googleapis.com/css2?family=PT+Serif&display=swap');
+        </style>
       </Head>
 
       <div className={styles.main}>

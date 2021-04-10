@@ -24,7 +24,7 @@ const Profile = ({ profile }) => {
       <Row>
         <Col md={6}>
           <Col>
-            <h4>{profile.name}</h4>
+            <h1>{profile.name}</h1>
             {profile.social.map((p, i) => (
               <span key={i}>{p}</span>
             ))}
