@@ -20,7 +20,7 @@ const Status = ({ resume }) => {
     <>
       <OverlayTrigger trigger='click' placement='right' overlay={popover}>
         <Button className={`${styles.btn} ${styles.resumeBtn}`}>
-          Open for Offers!
+          ☞ &nbsp; Open for Offers!
         </Button>
       </OverlayTrigger>
     </>

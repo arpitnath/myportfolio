@@ -8,9 +8,18 @@ import Status from './Status'
 
 const Profile = ({ profile }) => {
   const [skills2, setSkills2] = useState(false)
+  const [hireable] = useState(() => profile.status)
 
   const showSkills2 = () => {
     setSkills2(!skills2)
+  }
+
+  const disableBtnStyles = {
+    margin: ' 0px 10px',
+    width: '50%',
+    height: '50px',
+    backgroundColor: '#3d4e5d',
+    border: 'none'
   }
 
   return (
@@ -59,7 +68,13 @@ const Profile = ({ profile }) => {
             <Link href='/projects'>
               <Button className={styles.btn}>Projects</Button>
             </Link>
-            <Status resume={profile.resume} />
+            {hireable === true ? (
+              <Status resume={profile.resume} />
+            ) : (
+              <Button disabled style={disableBtnStyles}>
+                ❌ &nbsp; Open for Offers!
+              </Button>
+            )}
           </Col>
         </Col>
         <Col className={styles.displayPicture} md={6}>
