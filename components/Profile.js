@@ -1,4 +1,5 @@
 import Link from 'next/link'
+import { useState } from 'react'
 import {
   Button,
   Row,
@@ -11,6 +12,12 @@ import styles from '../styles/Home.module.css'
 import Skills from './Skills'
 
 const Profile = ({ profile }) => {
+  const [skills2, setSkills2] = useState(false)
+
+  const showSkills2 = () => {
+    setSkills2(!skills2)
+  }
+
   const popover = (
     <Popover id='popover-basic'>
       <Popover.Title as='h3'>Popover right</Popover.Title>
@@ -38,10 +45,28 @@ const Profile = ({ profile }) => {
               <span className={styles.org}>{profile.organization}</span>
               &nbsp;{`${'(' + profile.location + ')'}`}
             </Col>
+            {/*@Skills */}
+            {!skills2 && (
+              <Col className={styles.bioInfo}>
+                🦾 &nbsp; Skills:
+                <Skills skills={profile.skills} />
+              </Col>
+            )}
+            {/*@Familiar tools & Skills */}
+
             <Col className={styles.bioInfo}>
-              🦾 &nbsp; Skills:
-              <Skills skills={profile.skills} />
+              🦾 &nbsp; Familiar with:{' '}
+              <Button
+                className={styles.showSkills}
+                variant='light'
+                onClick={showSkills2}
+              >
+                <img src='/tool.svg' />
+                View
+              </Button>
+              {skills2 && <Skills skills={profile.skills2} />}
             </Col>
+
             <Col className={styles.bioInfo}>
               🧑🏻‍💻 &nbsp; Bio: <span>{profile.bio}</span>
             </Col>
