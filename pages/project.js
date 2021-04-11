@@ -35,8 +35,8 @@ const project = ({ projectArr }) => {
   return (
     <>
       <Layout>
-        <Jumbotron style={{ marginTop: '-10%' }}>
-          <h1>Hello, world!</h1>
+        <Jumbotron className={styles.jumboHeader}>
+          <h1>Side Projects !</h1>
           <p>
             This is a simple hero unit, a simple jumbotron-style component for
             calling extra attention to featured content or information.

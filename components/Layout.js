@@ -18,6 +18,7 @@ const Layout = ({ children }) => {
           @import
           url('https://fonts.googleapis.com/css2?family=PT+Serif&display=swap');
         </style>
+        <script src='https://code.iconify.design/1/1.0.7/iconify.min.js'></script>
       </Head>
 
       <div className='main'>{children}</div>

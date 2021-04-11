@@ -11,13 +11,29 @@ const Cards = ({ data }) => {
           <div className={styles.sectionWrapper}>
             <Row>
               <Col md={6}>
-                <a href={data.demo}>Live Demo</a>
+                <a href={data.demo}>
+                  <span
+                    class='iconify'
+                    data-icon='whh:website'
+                    data-inline='false'
+                  ></span>
+                  Live Demo
+                </a>
               </Col>
               <Col className={styles.cardlink} md={6}>
-                <a href={data.repo}>GitHub</a>
+                <a href={data.repo}>
+                  <span
+                    class='iconify'
+                    data-icon='logos:github-octocat'
+                    data-inline='false'
+                  ></span>
+                  GitHub
+                </a>
               </Col>
             </Row>
-            <Card.Text>{data.description}</Card.Text>
+            <Card.Text className={styles.cardDescription}>
+              {data.description}
+            </Card.Text>
             {data.tech.map(t => (
               <div
                 key={t.id}
@@ -37,13 +53,21 @@ const Cards = ({ data }) => {
         <Card.Footer>
           <Row>
             <Col md={6}>
-              <img className={styles.icon} src='git.svg' />
+              <span
+                class='iconify'
+                data-icon='ant-design:field-time-outlined'
+                data-inline='false'
+              ></span>
               <small className='text-muted'>
                 Last updated on <strong>{data.updated}</strong>
               </small>
             </Col>
-            <Col md={6}>
-              <img className={styles.icon} src='git.svg' />
+            <Col className={styles.cardlink} md={6}>
+              <span
+                class='iconify'
+                data-icon='logos:git'
+                data-inline='false'
+              ></span>
               <small className='text-muted'>
                 <a target='_blank' href={data.repo}>
                   <strong>Source Code</strong>
