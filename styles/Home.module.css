@@ -146,6 +146,11 @@
   text-align: end;
 }
 
+.sharedCard {
+  height:600px;
+  width: 600px;
+}
+
 @media (max-width: 768px ) {
   .main {
     margin-top: -10vh;

@@ -1,3 +1,111 @@
+export const api_config = {
+  method: 'get',
+  url: 'https://api.github.com/users/arpitnath/repos',
+  headers: {
+    AUTHORIZATION: 'Token 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'
+  }
+}
+
+const technologies = [
+  {
+    id: 356618670,
+    tech: [
+      {
+        id: 0,
+        title: 'javascript',
+        icon: 'js.svg'
+      },
+      {
+        id: 1,
+        title: 'python',
+        icon: 'python.svg'
+      },
+      {
+        id: 2,
+        title: 'PostGreSql',
+        icon: 'psql.svg'
+      }
+    ]
+  },
+  {
+    id: 326847239,
+    tech: [
+      {
+        id: 0,
+        title: 'reactJs',
+        icon: 'react.svg'
+      },
+      {
+        id: 1,
+        title: 'expressJs',
+        icon: 'express.svg'
+      },
+      {
+        id: 2,
+        title: 'nodeJs',
+        icon: 'nodejs.svg'
+      },
+      {
+        id: 3,
+        title: 'MongoDb',
+        icon: 'mongo.svg'
+      },
+      {
+        id: 4,
+        title: 'Redux',
+        icon: 'redux.svg'
+      }
+    ]
+  },
+  {
+    id: 324222363,
+    tech: [
+      {
+        id: 0,
+        title: 'javascript',
+        icon: 'js.svg'
+      },
+      {
+        id: 1,
+        title: 'react',
+        icon: 'react.svg'
+      }
+    ]
+  },
+  {
+    id: 4456,
+    tech: [
+      {
+        id: 0,
+        title: 'reactJs',
+        icon: 'react.svg'
+      },
+      {
+        id: 1,
+        title: 'expressJs',
+        icon: 'express.svg'
+      },
+      {
+        id: 2,
+        title: 'nodeJs',
+        icon: 'nodejs.svg'
+      },
+      {
+        id: 3,
+        title: 'MongoDb',
+        icon: 'mongo.svg'
+      }
+    ]
+  }
+]
+//   const test = technologies.filter(item => item.id === 356618670)
+//   console.log(test)
+function getArr(id, obj) {
+  const arr = []
+  obj.find(item => (item.id === id ? arr.push(item.tech) : null))
+  return arr.flat()
+}
+
 export const profileData = response => {
   return {
     name: response.name,
@@ -63,4 +171,20 @@ export const profileData = response => {
       { title: 'Netlify', icon: 'netlify.svg' }
     ]
   }
+}
+
+export const projectData = (response, array) => {
+  array.push({
+    id: response.id,
+    title: response.name,
+    demo: response.homepage,
+    repo: response.html_url,
+    image: 'nextjs.svg', //need to et this too from api
+    description: response.description,
+    tech: getArr(response.id, technologies),
+    updated: response.updated_at,
+    lastCommit: 'merge staging to prod'
+  })
+
+  return array
 }

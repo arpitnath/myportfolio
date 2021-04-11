@@ -2,7 +2,23 @@ import Head from 'next/head'
 import styles from '../styles/Home.module.css'
 import Profile from '../components/Profile'
 import Footer from '../components/Footer'
-import { profileData } from '../utils'
+import { profileData, api_config } from '../utils'
+
+export const getStaticProps = async () => {
+  const reqData = await fetch(
+    `https://api.github.com/users/arpitnath`,
+    api_config
+  )
+  const resp = await reqData.json()
+  const data = profileData(resp)
+
+  return {
+    props: {
+      data
+    },
+    revalidate: 3600
+  }
+}
 
 const Home = ({ data }) => {
   return (
@@ -30,19 +46,6 @@ const Home = ({ data }) => {
       <Footer />
     </>
   )
-}
-
-export const getStaticProps = async () => {
-  const reqData = await fetch(`https://api.github.com/users/arpitnath`)
-  const resp = await reqData.json()
-  const data = profileData(resp)
-
-  return {
-    props: {
-      data
-    },
-    revalidate: 3600
-  }
 }
 
 export default Home

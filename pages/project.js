@@ -2,94 +2,38 @@ import Head from 'next/head'
 import { Card, CardDeck, Col, Jumbotron, Row } from 'react-bootstrap'
 import Footer from '../components/Footer'
 import styles from '../styles/Home.module.css'
+import { projectData, api_config } from '../utils'
 
-const project = () => {
-  const cardData = [
-    {
-      id: 0,
-      title: 'Card Title',
-      demo: 'https://github.com/',
-      repo: 'https://github.com/repo',
-      image: 'nextjs.svg',
-      description:
-        'This is a wider card with supporting text below as a naturallead-in to additional content. This content is a little bit longer',
-      tech: [
-        {
-          id: 0,
-          title: 'javascript',
-          icon: 'js.svg'
-        },
-        {
-          id: 1,
-          title: 'python',
-          icon: 'python.svg'
-        },
-        {
-          id: 2,
-          title: 'PostGreSql',
-          icon: 'psql.svg'
-        }
-      ],
-      updated: 'Last updated 3 mins ago',
-      lastCommit: 'merge staging to prod'
-    },
-    {
-      id: 1,
-      title: 'Card Title',
-      demo: 'https://github.com/',
-      repo: 'https://github.com/repo',
-      image: 'nextjs.svg',
-      description:
-        'This is a wider card with supporting text below as a naturallead-in to additional content. This content is a little bit longer',
-      tech: [
-        {
-          id: 0,
-          title: 'javascript',
-          icon: 'js.svg'
-        },
-        {
-          id: 1,
-          title: 'python',
-          icon: 'python.svg'
-        },
-        {
-          id: 2,
-          title: 'PostGreSql',
-          icon: 'psql.svg'
-        }
-      ],
-      updated: 'Last updated 3 mins ago',
-      lastCommit: 'merge staging to prod'
-    },
-    {
-      id: 2,
-      title: 'Card Title',
-      demo: 'https://github.com/',
-      repo: 'https://github.com/repo',
-      image: 'nextjs.svg',
-      description:
-        'This is a wider card with supporting text below as a naturallead-in to additional content. This content is a little bit longer',
-      tech: [
-        {
-          id: 0,
-          title: 'javascript',
-          icon: 'js.svg'
-        },
-        {
-          id: 1,
-          title: 'python',
-          icon: 'python.svg'
-        },
-        {
-          id: 2,
-          title: 'PostGreSql',
-          icon: 'psql.svg'
-        }
-      ],
-      updated: 'Last updated 3 mins ago',
-      lastCommit: 'merge staging to prod'
-    }
+export const getStaticProps = async () => {
+  var projectArr = []
+  const repositories = [
+    'myportfolio',
+    'cogs_of_life_project',
+    'Imgur_Clone_React_PixabayApi'
   ]
+  await Promise.all(
+    repositories.map(async query => {
+      const response = await fetch(
+        `https://api.github.com/repos/arpitnath/${query}`,
+        api_config
+      )
+      const data = await response.json()
+
+      projectData(data, projectArr)
+    })
+  )
+
+  return {
+    props: {
+      projectArr
+    },
+    revalidate: 3600
+  }
+}
+
+const project = ({ projectArr }) => {
+  //   console.log(projectArr)
+
   return (
     <>
       <Head>
@@ -118,8 +62,8 @@ const project = () => {
         </Jumbotron>
         <div>
           <CardDeck className={styles.Wrapper}>
-            {cardData.map(card => (
-              <Card key={card.id}>
+            {projectArr.map(card => (
+              <Card className={styles.sharedCard} key={card.id}>
                 <Card.Img
                   style={{ padding: '20px' }}
                   variant='top'
@@ -140,9 +84,9 @@ const project = () => {
                     {card.tech.map(t => (
                       <div
                         style={{
-                          padding: '0px',
+                          padding: '0 35px',
                           textAlign: 'center',
-                          marginLeft: '-10%'
+                          marginLeft: '-18%'
                         }}
                         className={styles.sectionContent}
                       >
