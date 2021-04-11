@@ -45,7 +45,7 @@ const project = ({ projectArr }) => {
         <div>
           <CardDeck className={styles.Wrapper}>
             {projectArr.map(card => (
-              <Cards data={card} />
+              <Cards key={card.id} data={card} />
             ))}
           </CardDeck>
         </div>

@@ -4,7 +4,7 @@ import styles from '../styles/Home.module.css'
 const Cards = ({ data }) => {
   return (
     <>
-      <Card className={styles.sharedCard} key={data.id}>
+      <Card className={styles.sharedCard}>
         <Card.Img style={{ padding: '20px' }} variant='top' src={data.image} />
         <Card.Body>
           <Card.Title>{data.title}</Card.Title>
