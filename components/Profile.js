@@ -1,16 +1,10 @@
 import Link from 'next/link'
 import { useState } from 'react'
-import {
-  Button,
-  Row,
-  Col,
-  Container,
-  OverlayTrigger,
-  Popover
-} from 'react-bootstrap'
+import { Button, Row, Col, Container } from 'react-bootstrap'
 import styles from '../styles/Home.module.css'
 import Skills from './Skills'
 import SocialIcons from './SocialIcons'
+import Status from './Status'
 
 const Profile = ({ profile }) => {
   const [skills2, setSkills2] = useState(false)
@@ -19,15 +13,6 @@ const Profile = ({ profile }) => {
     setSkills2(!skills2)
   }
 
-  const popover = (
-    <Popover id='popover-basic'>
-      <Popover.Title as='h3'>Popover right</Popover.Title>
-      <Popover.Content>
-        And here's some <strong>amazing</strong> content. It's very engaging.
-        right?
-      </Popover.Content>
-    </Popover>
-  )
   return (
     <Container>
       <Row>
@@ -74,11 +59,7 @@ const Profile = ({ profile }) => {
             <Link href='/projects'>
               <Button className={styles.btn}>Projects</Button>
             </Link>
-            <OverlayTrigger trigger='click' placement='right' overlay={popover}>
-              <Button className={`${styles.btn} ${styles.resumeBtn}`}>
-                Click me to see
-              </Button>
-            </OverlayTrigger>
+            <Status resume={profile.resume} />
           </Col>
         </Col>
         <Col className={styles.displayPicture} md={6}>

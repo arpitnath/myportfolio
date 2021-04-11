@@ -7,6 +7,7 @@ export default function Home() {
   const profileData = {
     name: 'Arpit Nath',
     role: 'Frontend Developer',
+    status: true,
     social: [
       {
         id: 0,
@@ -31,6 +32,10 @@ export default function Home() {
     bio: ' Lorem, ipsum dolor sit amet consectetur adipisicing elit. Enim',
     imgUrl: '/profile.jpg',
     location: 'Remote',
+    resume: {
+      resumeQRCode: 'resumeqr.svg',
+      resumeUrl: 'https://qrgo.page.link/RZWai'
+    },
     skills: [
       { title: 'ReactJS', icon: 'react.svg' },
       { title: 'Redux', icon: 'redux.svg' },
