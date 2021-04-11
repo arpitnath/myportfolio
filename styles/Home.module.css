@@ -1,13 +1,12 @@
 
-.main {
-  padding: 8rem 0;
-  margin-top: 10vh;
-  flex: 1;
+
+.Wrapper {
+  padding: 18rem;
+  margin-top: -15rem;
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   justify-content: center;
   align-items: center;
-
 }
 
 .footer {
@@ -125,6 +124,24 @@
 
 .skillTitle {
   font-weight: bold; 
+}
+
+.cardlink {
+  text-align: end;
+}
+
+.sharedCard {
+  height:600px;
+  width: 600px;
+}
+
+.cardDescription {
+  margin: 10px 0;
+}
+
+.jumboHeader {
+  margin-top: -15rem;
+  background: none;
 }
 
 

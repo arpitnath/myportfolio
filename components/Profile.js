@@ -65,7 +65,7 @@ const Profile = ({ profile }) => {
             </Col>
           </div>
           <Col className={`${styles.btnLinks} ${styles.bioInfo}`}>
-            <Link href='/projects'>
+            <Link href='/project'>
               <Button className={styles.btn}>Projects</Button>
             </Link>
             {hireable === true ? (
