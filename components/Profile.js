@@ -35,9 +35,18 @@ const Profile = ({ profile }) => {
             <span>Hi there 😁 &nbsp;I'm</span>
             <h1>{profile.name}</h1>
             <h5>{profile.role}</h5>
-            {profile.social.map((p, i) => (
-              <span key={i}>{p}</span>
-            ))}
+            <div
+              style={{ marginLeft: '-60px', marginBottom: '-60px' }}
+              className={styles.sectionWrapper}
+            >
+              {profile.social.map(ac => (
+                <div className={styles.sectionContent} key={ac.id}>
+                  <a target='_blank' href={ac.url}>
+                    <img src={ac.icon} />
+                  </a>
+                </div>
+              ))}
+            </div>
           </Col>
           <div className={styles.bio}>
             <Col className={styles.bioInfo}>
