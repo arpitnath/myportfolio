@@ -1,17 +1,10 @@
 import Head from 'next/head'
-import Link from 'next/link'
-import {
-  Button,
-  Row,
-  Col,
-  Container,
-  OverlayTrigger,
-  Popover
-} from 'react-bootstrap'
 import styles from '../styles/Home.module.css'
+import Profile from '../components/Profile'
+import Footer from '../components/Footer'
 
 export default function Home() {
-  const profile = {
+  const profileData = {
     name: 'Arpit Nath',
     role: 'Frontend Developer',
     social: [
@@ -20,17 +13,41 @@ export default function Home() {
       'http://arpitnath42@gmail.com'
     ],
     organization: 'Innoloft Gmbh',
-    imgUrl: '/vercel.svg'
+    bio: ' Lorem, ipsum dolor sit amet consectetur adipisicing elit. Enim',
+    imgUrl: '/profile.jpg',
+    location: 'Remote',
+    skills: [
+      { title: 'ReactJS', icon: 'react.svg' },
+      { title: 'Redux', icon: 'redux.svg' },
+      { title: 'NextJS', icon: 'nextjs.svg' },
+      { title: 'ExpressJS', icon: 'express.svg' },
+      { title: 'NodeJS', icon: 'nodejs.svg' },
+      { title: 'JavaScript', icon: 'js.svg' },
+      { title: 'python', icon: 'python.svg' },
+      { title: 'MongoDb', icon: 'mongo.svg' },
+      { title: 'PostGreSql', icon: 'psql.svg' },
+      { title: 'Html5', icon: 'html.svg' },
+      { title: 'css3', icon: 'css.svg' },
+      { title: 'styled components', icon: 'styled.svg' }
+    ],
+    skills2: [
+      { title: 'Git', icon: 'git.svg' },
+      { title: 'NPM', icon: 'npm.svg' },
+      { title: 'yarn', icon: 'yarn.svg' },
+      { title: 'EsLint', icon: 'eslint.svg' },
+      { title: 'Prettier', icon: 'prettier.svg' },
+      { title: 'TypeScript', icon: 'ts.svg' },
+      { title: 'Sass', icon: 'sass.svg' },
+      { title: 'Redis', icon: 'redis.svg' },
+      { title: 'Django', icon: 'django.svg' },
+      { title: 'Webpack', icon: 'wbp.svg' },
+      { title: 'Babel', icon: 'babel.svg' },
+      { title: 'Docker', icon: 'docker.svg' },
+      { title: 'Jest', icon: 'jest.svg' },
+      { title: 'Heroku', icon: 'heroku.svg' },
+      { title: 'Netlify', icon: 'netlify.svg' }
+    ]
   }
-  const popover = (
-    <Popover id='popover-basic'>
-      <Popover.Title as='h3'>Popover right</Popover.Title>
-      <Popover.Content>
-        And here's some <strong>amazing</strong> content. It's very engaging.
-        right?
-      </Popover.Content>
-    </Popover>
-  )
 
   return (
     <>
@@ -43,56 +60,18 @@ export default function Home() {
           integrity='sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T'
           crossOrigin='anonymous'
         />
+        {/*@Fonts */}
+        <style>
+          @import
+          url('https://fonts.googleapis.com/css2?family=PT+Serif&display=swap');
+        </style>
       </Head>
 
       <div className={styles.main}>
-        <Container>
-          <Row>
-            <Col md={6}>
-              <Col>
-                <h4>{profile.name}</h4>
-                {profile.social.map((p, i) => (
-                  <span key={i}>{p}</span>
-                ))}
-                <h5>{profile.role}</h5>
-              </Col>
-              <div className={styles.bio}>
-                <Col>working for: {profile.organization}</Col>
-                <Col>Skills:</Col>
-                <Col>
-                  Lorem, ipsum dolor sit amet consectetur adipisicing elit.
-                  Enim, nisi.
-                </Col>
-              </div>
-              <Col>
-                <Link href='/projects'>
-                  <Button>Projects</Button>
-                </Link>
-                <OverlayTrigger
-                  trigger='click'
-                  placement='right'
-                  overlay={popover}
-                >
-                  <Button variant='success'>Click me to see</Button>
-                </OverlayTrigger>
-              </Col>
-            </Col>
-            <Col md={6}>
-              <img src={profile.imgUrl} />
-            </Col>
-          </Row>
-        </Container>
+        <Profile profile={profileData} />
       </div>
 
-      <footer className={styles.footer}>
-        <Container>
-          <Row>
-            <Col className={`text-center py-3 ${styles.footerContent}`}>
-              © 2021 - All rights reserved. Made with ❤ by Arpit
-            </Col>
-          </Row>
-        </Container>
-      </footer>
+      <Footer />
     </>
   )
 }
