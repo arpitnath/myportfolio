@@ -1,7 +1,6 @@
-import Head from 'next/head'
 import { CardDeck, Jumbotron } from 'react-bootstrap'
 import Cards from '../components/Cards'
-import Footer from '../components/Footer'
+import Layout from '../components/Layout'
 import styles from '../styles/Home.module.css'
 import { projectData, api_config } from '../utils'
 
@@ -33,27 +32,9 @@ export const getStaticProps = async () => {
 }
 
 const project = ({ projectArr }) => {
-  //   console.log(projectArr)
-
   return (
     <>
-      <Head>
-        <title>Next App</title>
-        <link rel='icon' href='/favicon.ico' />
-        <link
-          rel='stylesheet'
-          href='https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css'
-          integrity='sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T'
-          crossOrigin='anonymous'
-        />
-        {/*@Fonts */}
-        <style>
-          @import
-          url('https://fonts.googleapis.com/css2?family=PT+Serif&display=swap');
-        </style>
-      </Head>
-
-      <div className={styles.main}>
+      <Layout>
         <Jumbotron style={{ marginTop: '-10%' }}>
           <h1>Hello, world!</h1>
           <p>
@@ -68,9 +49,7 @@ const project = ({ projectArr }) => {
             ))}
           </CardDeck>
         </div>
-      </div>
-
-      <Footer />
+      </Layout>
     </>
   )
 }
