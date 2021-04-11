@@ -10,6 +10,7 @@ import {
 } from 'react-bootstrap'
 import styles from '../styles/Home.module.css'
 import Skills from './Skills'
+import SocialIcons from './SocialIcons'
 
 const Profile = ({ profile }) => {
   const [skills2, setSkills2] = useState(false)
@@ -35,13 +36,11 @@ const Profile = ({ profile }) => {
             <span>Hi there 😁 &nbsp;I'm</span>
             <h1>{profile.name}</h1>
             <h5>{profile.role}</h5>
-            {profile.social.map((p, i) => (
-              <span key={i}>{p}</span>
-            ))}
+            <SocialIcons data={profile.social} />
           </Col>
           <div className={styles.bio}>
             <Col className={styles.bioInfo}>
-              🛠 &nbsp; working for:{' '}
+              💼 &nbsp; working for:{' '}
               <span className={styles.org}>{profile.organization}</span>
               &nbsp;{`${'(' + profile.location + ')'}`}
             </Col>

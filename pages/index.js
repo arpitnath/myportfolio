@@ -8,9 +8,24 @@ export default function Home() {
     name: 'Arpit Nath',
     role: 'Frontend Developer',
     social: [
-      'http://github.ac',
-      'http://linkedIn.ac',
-      'http://arpitnath42@gmail.com'
+      {
+        id: 0,
+        title: 'Github',
+        url: 'https://github.com/arpitnath',
+        icon: 'github.svg'
+      },
+      {
+        id: 1,
+        title: 'LinkedIn',
+        url: 'https://www.linkedin.com/in/arpit-nath-38280a173/',
+        icon: 'linkedin.svg'
+      },
+      {
+        id: 2,
+        title: 'Gmail',
+        url: 'mailto: http://arpitnath42@gmail.com',
+        icon: 'gmail.svg'
+      }
     ],
     organization: 'Innoloft Gmbh',
     bio: ' Lorem, ipsum dolor sit amet consectetur adipisicing elit. Enim',
