@@ -29,7 +29,8 @@ export default function Home() {
       }
     ],
     organization: 'Innoloft Gmbh',
-    bio: ' Lorem, ipsum dolor sit amet consectetur adipisicing elit. Enim',
+    bio:
+      'Passionate about Tech, problem-solving through code & self-learning | Kitchen is my laboratory | Father to a Labrador Retriever 🦮',
     imgUrl: '/profile.jpg',
     location: 'Remote',
     resume: {
