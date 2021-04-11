@@ -100,11 +100,17 @@ const project = ({ projectArr }) => {
                   <Row>
                     <Col md={6}>
                       <img className={styles.icon} src='git.svg' />
-                      <small className='text-muted'>{card.updated}</small>
+                      <small className='text-muted'>
+                        Last updated on <strong>{card.updated}</strong>
+                      </small>
                     </Col>
                     <Col md={6}>
                       <img className={styles.icon} src='git.svg' />
-                      <small className='text-muted'>{card.lastCommit}</small>
+                      <small className='text-muted'>
+                        <a target='_blank' href={card.repo}>
+                          <strong>Source Code</strong>
+                        </a>
+                      </small>
                     </Col>
                   </Row>
                 </Card.Footer>

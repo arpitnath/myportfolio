@@ -2,7 +2,7 @@ export const api_config = {
   method: 'get',
   url: 'https://api.github.com/users/arpitnath/repos',
   headers: {
-    AUTHORIZATION: 'Token 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'
+    AUTHORIZATION: 'Token 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'
   }
 }
 
@@ -182,8 +182,7 @@ export const projectData = (response, array) => {
     image: 'nextjs.svg', //need to et this too from api
     description: response.description,
     tech: getArr(response.id, technologies),
-    updated: response.updated_at,
-    lastCommit: 'merge staging to prod'
+    updated: response.updated_at.slice(0, 10)
   })
 
   return array

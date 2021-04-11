@@ -21,3 +21,8 @@ h1 {
   font-family: 'PT Serif', serif;
   color: #f0f8f8;
 }
+
+.text-muted {
+  width: 100%;
+  font-size: 10px;
+}
