@@ -98,8 +98,7 @@ const technologies = [
     ]
   }
 ]
-//   const test = technologies.filter(item => item.id === 356618670)
-//   console.log(test)
+
 function getArr(id, obj) {
   const arr = []
   obj.find(item => (item.id === id ? arr.push(item.tech) : null))

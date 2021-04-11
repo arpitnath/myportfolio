@@ -1,5 +1,6 @@
 import Head from 'next/head'
-import { Card, CardDeck, Col, Jumbotron, Row } from 'react-bootstrap'
+import { CardDeck, Jumbotron } from 'react-bootstrap'
+import Cards from '../components/Cards'
 import Footer from '../components/Footer'
 import styles from '../styles/Home.module.css'
 import { projectData, api_config } from '../utils'
@@ -63,58 +64,7 @@ const project = ({ projectArr }) => {
         <div>
           <CardDeck className={styles.Wrapper}>
             {projectArr.map(card => (
-              <Card className={styles.sharedCard} key={card.id}>
-                <Card.Img
-                  style={{ padding: '20px' }}
-                  variant='top'
-                  src={card.image}
-                />
-                <Card.Body>
-                  <Card.Title>{card.title}</Card.Title>
-                  <div className={styles.sectionWrapper}>
-                    <Row>
-                      <Col md={6}>
-                        <a href={card.demo}>Live Demo</a>
-                      </Col>
-                      <Col className={styles.cardlink} md={6}>
-                        <a href={card.repo}>GitHub</a>
-                      </Col>
-                    </Row>
-                    <Card.Text>{card.description}</Card.Text>
-                    {card.tech.map(t => (
-                      <div
-                        style={{
-                          padding: '0 35px',
-                          textAlign: 'center',
-                          marginLeft: '-18%'
-                        }}
-                        className={styles.sectionContent}
-                      >
-                        <img src={t.icon} />
-                        <p className={styles.skillTitle}>{t.title}</p>
-                      </div>
-                    ))}
-                  </div>
-                </Card.Body>
-                <Card.Footer>
-                  <Row>
-                    <Col md={6}>
-                      <img className={styles.icon} src='git.svg' />
-                      <small className='text-muted'>
-                        Last updated on <strong>{card.updated}</strong>
-                      </small>
-                    </Col>
-                    <Col md={6}>
-                      <img className={styles.icon} src='git.svg' />
-                      <small className='text-muted'>
-                        <a target='_blank' href={card.repo}>
-                          <strong>Source Code</strong>
-                        </a>
-                      </small>
-                    </Col>
-                  </Row>
-                </Card.Footer>
-              </Card>
+              <Cards data={card} />
             ))}
           </CardDeck>
         </div>
