@@ -14,7 +14,7 @@ export const getStaticProps = async () => {
   await Promise.all(
     repositories.map(async query => {
       const response = await fetch(
-        `https://api.github.com/repos/arpitnath/${query}?client_id=8ed38b2b0d8bb63557f9&client_secret=b38accbafd323e20075a316cba1d3eb3e15dde95`,
+        `https://api.github.com/repos/arpitnath/${query}`,
         api_config
       )
       const data = await response.json()
