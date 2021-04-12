@@ -13,7 +13,7 @@ const Cards = ({ data }) => {
               <Col md={6}>
                 <a href={data.demo}>
                   <span
-                    class='iconify'
+                    className='iconify'
                     data-icon='whh:website'
                     data-inline='false'
                   ></span>
@@ -23,7 +23,7 @@ const Cards = ({ data }) => {
               <Col className={styles.cardlink} md={6}>
                 <a href={data.repo}>
                   <span
-                    class='iconify'
+                    className='iconify'
                     data-icon='logos:github-octocat'
                     data-inline='false'
                   ></span>
@@ -54,7 +54,7 @@ const Cards = ({ data }) => {
           <Row>
             <Col md={6}>
               <span
-                class='iconify'
+                className='iconify'
                 data-icon='ant-design:field-time-outlined'
                 data-inline='false'
               ></span>
@@ -64,7 +64,7 @@ const Cards = ({ data }) => {
             </Col>
             <Col className={styles.cardlink} md={6}>
               <span
-                class='iconify'
+                className='iconify'
                 data-icon='logos:git'
                 data-inline='false'
               ></span>

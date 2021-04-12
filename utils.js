@@ -2,7 +2,7 @@ export const api_config = {
   method: 'get',
   url: 'https://api.github.com/users/arpitnath/repos',
   headers: {
-    AUTHORIZATION: 'Token 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'
+    Authorization: `Token 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`
   }
 }
 
