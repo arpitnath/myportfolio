@@ -1,9 +1,8 @@
 export const api_config = {
-  method: 'get',
-  url: 'https://api.github.com/users/arpitnath/repos'
-  // headers: {
-  //   Authorization: `Token [token]`
-  // }
+  method: 'GET',
+  headers: {
+    Authorization: `Bearer ${process.env.NEXT_APP_GITHUB_KEY}`
+  }
 }
 
 const technologies = [
