@@ -9,7 +9,6 @@ export const getStaticProps = async () => {
   )
   const resp = await reqData.json()
   const data = profileData(resp)
-
   return {
     props: {
       data
