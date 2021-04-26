@@ -6,11 +6,7 @@ import { projectData, api_config } from '../utils'
 
 export const getStaticProps = async () => {
   var projectArr = []
-  const repositories = [
-    'myportfolio',
-    'cogs_of_life_project',
-    'Imgur_Clone_React_PixabayApi'
-  ]
+  const repositories = ['myportfolio', 'cogs_of_life_project', 'spacex']
   await Promise.all(
     repositories.map(async query => {
       const response = await fetch(
