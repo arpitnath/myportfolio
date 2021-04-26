@@ -5,7 +5,7 @@ const Layout = ({ children }) => {
   return (
     <>
       <Head>
-        <title>Next App</title>
+        <title>Arpit Nath</title>
         <link rel='icon' href='/favicon.ico' />
         <link
           rel='stylesheet'
