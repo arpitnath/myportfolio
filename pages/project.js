@@ -1,4 +1,4 @@
-import { Button, CardDeck, Jumbotron } from 'react-bootstrap'
+import { CardDeck, Jumbotron } from 'react-bootstrap'
 import Link from 'next/link'
 import Cards from '../components/Cards'
 import Layout from '../components/Layout'
