@@ -41,3 +41,28 @@ h1 {
 .iconify {
   margin-right: 0.5rem;
 }
+
+.sectionWrapper {
+  width: inherit;
+  margin-left: auto;
+  margin-right: auto;
+
+}
+
+.sectionTechWrapper {
+  width: inherit;
+  margin-left: -15px;
+  display: flex;
+}
+
+@media (max-width: 768px )  {
+  .main {
+    width: 900px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 20vh;
+  }
+  .sectionTechWrapper {
+    margin-left: 50px;
+ }
+}

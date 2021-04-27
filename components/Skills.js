@@ -1,9 +1,9 @@
 import styles from '../styles/Home.module.css'
 
-const Skills = ({ skills }) => {
+const Skills = ({ skills, wrapper }) => {
   return (
     <>
-      <div className={styles.sectionWrapper}>
+      <div className={`${wrapper}`}>
         {skills.map((skill, ind) => (
           <div className={styles.sectionContent} key={ind}>
             <img src={skill.icon} />

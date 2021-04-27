@@ -5,99 +5,6 @@ export const api_config = {
   }
 }
 
-const technologies = [
-  {
-    id: 356618670,
-    tech: [
-      {
-        id: 0,
-        title: 'javascript',
-        icon: 'js.svg'
-      },
-      {
-        id: 1,
-        title: 'python',
-        icon: 'python.svg'
-      },
-      {
-        id: 2,
-        title: 'PostGreSql',
-        icon: 'psql.svg'
-      }
-    ]
-  },
-  {
-    id: 326847239,
-    tech: [
-      {
-        id: 0,
-        title: 'reactJs',
-        icon: 'react.svg'
-      },
-      {
-        id: 1,
-        title: 'expressJs',
-        icon: 'express.svg'
-      },
-      {
-        id: 2,
-        title: 'nodeJs',
-        icon: 'nodejs.svg'
-      },
-      {
-        id: 3,
-        title: 'MongoDb',
-        icon: 'mongo.svg'
-      },
-      {
-        id: 4,
-        title: 'Redux',
-        icon: 'redux.svg'
-      }
-    ]
-  },
-  {
-    id: 324222363,
-    tech: [
-      {
-        id: 0,
-        title: 'javascript',
-        icon: 'js.svg'
-      },
-      {
-        id: 1,
-        title: 'react',
-        icon: 'react.svg'
-      }
-    ]
-  },
-  {
-    id: 4456,
-    tech: [
-      {
-        id: 0,
-        title: 'reactJs',
-        icon: 'react.svg'
-      },
-      {
-        id: 1,
-        title: 'expressJs',
-        icon: 'express.svg'
-      },
-      {
-        id: 2,
-        title: 'nodeJs',
-        icon: 'nodejs.svg'
-      },
-      {
-        id: 3,
-        title: 'MongoDb',
-        icon: 'mongo.svg'
-      }
-    ]
-  }
-]
-
 function getArr(id, obj) {
   const arr = []
   obj.find(item => (item.id === id ? arr.push(item.tech) : null))
@@ -171,6 +78,11 @@ export const profileData = response => {
   }
 }
 
+function getLastUpdated(date) {
+  var updatedDate = new Date(date).toString().slice(4, 15)
+  return updatedDate
+}
+
 export const projectData = (response, array) => {
   array.push({
     id: response.id,
@@ -180,8 +92,91 @@ export const projectData = (response, array) => {
     image: 'nextjs.svg', //need to et this too from api
     description: response.description,
     tech: getArr(response.id, technologies),
-    updated: response.updated_at.slice(0, 10)
+    updated: getLastUpdated(response.updated_at.slice(0, 10))
   })
 
   return array
 }
+
+const technologies = [
+  {
+    id: 356618670,
+    tech: [
+      {
+        id: 0,
+        title: 'NextJs',
+        icon: 'nextjs.svg'
+      },
+      {
+        id: 1,
+        title: 'Bootstrap',
+        icon: 'bootstrap.svg'
+      }
+    ]
+  },
+  {
+    id: 326847239,
+    tech: [
+      {
+        id: 0,
+        title: 'reactJs',
+        icon: 'react.svg'
+      },
+      {
+        id: 1,
+        title: 'expressJs',
+        icon: 'express.svg'
+      },
+      {
+        id: 2,
+        title: 'nodeJs',
+        icon: 'nodejs.svg'
+      },
+      {
+        id: 3,
+        title: 'MongoDb',
+        icon: 'mongo.svg'
+      },
+      {
+        id: 4,
+        title: 'Redux',
+        icon: 'redux.svg'
+      },
+      {
+        id: 1,
+        title: 'Bootstrap',
+        icon: 'bootstrap.svg'
+      }
+    ]
+  },
+  {
+    id: 324222363,
+    tech: [
+      {
+        id: 0,
+        title: 'javascript',
+        icon: 'js.svg'
+      },
+      {
+        id: 1,
+        title: 'react',
+        icon: 'react.svg'
+      }
+    ]
+  },
+  {
+    id: 359473391,
+    tech: [
+      {
+        id: 0,
+        title: 'reactJs',
+        icon: 'react.svg'
+      },
+      {
+        id: 1,
+        title: 'css3',
+        icon: 'css.svg'
+      }
+    ]
+  }
+]

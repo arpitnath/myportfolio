@@ -1,4 +1,5 @@
 import { CardDeck, Jumbotron } from 'react-bootstrap'
+import Link from 'next/link'
 import Cards from '../components/Cards'
 import Layout from '../components/Layout'
 import styles from '../styles/Home.module.css'
@@ -6,11 +7,7 @@ import { projectData, api_config } from '../utils'
 
 export const getStaticProps = async () => {
   var projectArr = []
-  const repositories = [
-    'myportfolio',
-    'cogs_of_life_project',
-    'Imgur_Clone_React_PixabayApi'
-  ]
+  const repositories = ['myportfolio', 'cogs_of_life_project', 'spacex']
   await Promise.all(
     repositories.map(async query => {
       const response = await fetch(
@@ -33,7 +30,10 @@ export const getStaticProps = async () => {
 
 const project = ({ projectArr }) => {
   return (
-    <>
+    <div className={styles.Project}>
+      <Link href='/'>
+        <a>Go Back</a>
+      </Link>
       <Layout>
         <Jumbotron className={styles.jumboHeader}>
           <h1>Side Projects !</h1>
@@ -42,15 +42,14 @@ const project = ({ projectArr }) => {
             calling extra attention to featured content or information.
           </p>
         </Jumbotron>
-        <div>
-          <CardDeck className={styles.Wrapper}>
-            {projectArr.map(card => (
-              <Cards key={card.id} data={card} />
-            ))}
-          </CardDeck>
-        </div>
+
+        <CardDeck className={styles.Wrapper}>
+          {projectArr.map(card => (
+            <Cards key={card.id} data={card} />
+          ))}
+        </CardDeck>
       </Layout>
-    </>
+    </div>
   )
 }
 

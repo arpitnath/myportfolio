@@ -3,10 +3,28 @@
 .Wrapper {
   padding: 18rem;
   margin-top: -15rem;
-  display: flex;
-  flex-direction: row;
   justify-content: center;
   align-items: center;
+}
+
+
+.SocialIcons {
+  height: 90px;
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: -75px;
+  margin-top: 20px;
+}
+
+.SocialIcons a {
+  margin-left: -100px;
+}
+
+.sharedCard {
+  height:600px;
+  width: 600px;
+  
 }
 
 .footer {
@@ -29,6 +47,7 @@
   border: 1px solid #6bb5fc;
   padding: 20px;
   border-radius: 2px;
+  /* margin-top: -40px; */
 }
 
 .btnLinks {
@@ -53,7 +72,7 @@
 
 .content {
   padding: 20px;
-  margin-top: -250px;
+  margin-top: -260px;
 }
 
 .displayPicture {
@@ -94,31 +113,45 @@
   background-color: #6bb5fc;
 }
 
-.sectionWrapper {
-  /* border: 2px solid yellow; */
-  max-width: 100%;
-}
+
+
 .sectionContent {
   /* color: #f9826c; */
+  
+
   color: #ccc;
   display: inline-block;
   width: 140px;
+  margin-left: auto;
+  margin-right: auto;
   font-size: 12px;
   border-radius: 0 0 3px 3px;
   padding: 10px 0;
-  margin: 0;
+  margin-bottom: auto;
+  justify-content: center;
+  align-items: center;
   line-height: 0;
   text-align: center;
   top: -3px;
-  left: 15px;
   position: relative;
   margin-top: 10px;
   
+ 
+  
+}
+
+
+.techWrapper {
+  width: 400px;
+  display: flex;
+  margin-top: 20px;
+  position: relative;
+
 }
 
 .sectionContent  img {
-  height: 40px;
-  width: 40px;
+  height: 30px;
+  width: 30px;
   margin-bottom: 20px;
 }
 
@@ -130,13 +163,11 @@
   text-align: end;
 }
 
-.sharedCard {
-  height:600px;
-  width: 600px;
-}
+
 
 .cardDescription {
   margin: 10px 0;
+  /* margin-bottom: -30px; */
 }
 
 .jumboHeader {
@@ -145,12 +176,69 @@
 }
 
 
+.updatedDate {
+  margin-left: 30px;
+}
+
+.Project{
+  padding: 20px;
+}
+
+.Project > a {
+  text-decoration: none;
+}
+
+.Col2 {
+  text-align: end;
+}
+
 @media (max-width: 768px ) {
-  .main {
+  .Wrapper {
+    margin-left: 10rem;
+  }
+  .content {
     margin-top: -10vh;
   }
+
+  .SocialIcons {
+    width: 100%;
+    margin-bottom: -60px;
+    margin-top: 10px;
+  }
+
+  .displayPicture {
+    margin-left: auto;
+    margin-right: auto;
+  }
+  
+  .displayPicture > img {
+    margin-left: -25px;
+  }
+
+  .sharedCard {
+    grid-template-columns: 1fr;
+    column-gap: 30px;
+    position: relative;
+  }
+
+  .CardFooterContent {
+    display: none;
+  }
+
+  .cardlink {
+    margin-top: -30px;
+  }
+
+  
+
+  .jumboHeader {
+    width: 100%;
+    margin-left: 20%;
+  }
+  
   .footer {
-  margin-top: 50vh;
+    margin-top: 50vh;
+    width: 900px;
   } 
   .footerContent {
    margin-left: 100px;
