@@ -1,5 +1,6 @@
 import { Card, Col, Row } from 'react-bootstrap'
 import styles from '../styles/Home.module.css'
+import Skills from './Skills'
 
 const Cards = ({ data }) => {
   return (
@@ -29,7 +30,7 @@ const Cards = ({ data }) => {
 
         <Card.Body>
           <Card.Title>{data.title}</Card.Title>
-          <div className={styles.sectionWrapper}>
+          <div className={styles.sectionTechWrapper}>
             <Row>
               <Col md={6}>
                 <a href={data.demo}>
@@ -55,20 +56,9 @@ const Cards = ({ data }) => {
             <Card.Text className={styles.cardDescription}>
               {data.description}
             </Card.Text>
-            {data.tech.map(t => (
-              <div
-                key={t.id}
-                style={{
-                  padding: '0 35px',
-                  textAlign: 'center',
-                  marginLeft: '-18%'
-                }}
-                className={styles.sectionContent}
-              >
-                <img src={t.icon} />
-                <p className={styles.skillTitle}>{t.title}</p>
-              </div>
-            ))}
+          </div>
+          <div className={styles.techWrapper}>
+            <Skills skills={data.tech} wrapper='sectionTechWrapper' />
           </div>
         </Card.Body>
         <Card.Footer>

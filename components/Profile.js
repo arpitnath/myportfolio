@@ -43,7 +43,7 @@ const Profile = ({ profile }) => {
             {!skills2 && (
               <Col className={styles.bioInfo}>
                 🦾 &nbsp; Skills:
-                <Skills skills={profile.skills} />
+                <Skills skills={profile.skills} wrapper='sectionWrapper' />
               </Col>
             )}
             {/*@Familiar tools & Skills */}
@@ -58,7 +58,9 @@ const Profile = ({ profile }) => {
                 <img src='/tool.svg' />
                 View
               </Button>
-              {skills2 && <Skills skills={profile.skills2} />}
+              {skills2 && (
+                <Skills skills={profile.skills2} wrapper='sectionWrapper' />
+              )}
             </Col>
 
             <Col className={styles.bioInfo}>
