@@ -41,3 +41,12 @@ h1 {
 .iconify {
   margin-right: 0.5rem;
 }
+
+@media (max-width: 768px )  {
+  .main {
+    width: 900px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 20vh;
+  }
+}

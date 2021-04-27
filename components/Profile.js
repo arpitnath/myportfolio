@@ -30,6 +30,7 @@ const Profile = ({ profile }) => {
             <span>Hi there 😁 &nbsp;I'm</span>
             <h1>{profile.name}</h1>
             <h5>{profile.role}</h5>
+
             <SocialIcons data={profile.social} />
           </Col>
           <div className={styles.bio}>

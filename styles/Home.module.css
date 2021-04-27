@@ -9,6 +9,19 @@
   align-items: center;
 }
 
+.SocialIcons {
+  height: 90px;
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: -75px;
+  margin-top: 20px;
+}
+
+.SocialIcons a {
+  margin-left: -100px;
+}
+
 .footer {
   margin-top: 5vh;
 } 
@@ -29,6 +42,7 @@
   border: 1px solid #6bb5fc;
   padding: 20px;
   border-radius: 2px;
+  /* margin-top: -40px; */
 }
 
 .btnLinks {
@@ -53,7 +67,7 @@
 
 .content {
   padding: 20px;
-  margin-top: -250px;
+  margin-top: -260px;
 }
 
 .displayPicture {
@@ -95,8 +109,10 @@
 }
 
 .sectionWrapper {
-  /* border: 2px solid yellow; */
-  max-width: 900px;
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+
 }
 
 .sectionContent {
@@ -104,17 +120,17 @@
   color: #ccc;
   display: inline-block;
   width: 140px;
+  margin-left: auto;
+  margin-right: auto;
   font-size: 12px;
   border-radius: 0 0 3px 3px;
   padding: 10px 0;
-  margin-left: auto;
   margin-bottom: auto;
   justify-content: center;
   align-items: center;
   line-height: 0;
   text-align: center;
   top: -3px;
-  left: 50px;
   position: relative;
   margin-top: 10px;
   
@@ -153,11 +169,28 @@
 
 
 @media (max-width: 768px ) {
-  .main {
+  .content {
     margin-top: -10vh;
   }
+
+  .SocialIcons {
+    width: 100%;
+    margin-bottom: -60px;
+    margin-top: 10px;
+  }
+
+  .displayPicture {
+    margin-left: auto;
+    margin-right: auto;
+  }
+  
+  .displayPicture > img {
+    margin-left: -25px;
+  }
+  
   .footer {
-  margin-top: 50vh;
+    margin-top: 50vh;
+    width: 900px;
   } 
   .footerContent {
    margin-left: 100px;
