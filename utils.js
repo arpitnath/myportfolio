@@ -78,6 +78,11 @@ export const profileData = response => {
   }
 }
 
+function getLastUpdated(date) {
+  var updatedDate = new Date(date).toString().slice(4, 15)
+  return updatedDate
+}
+
 export const projectData = (response, array) => {
   array.push({
     id: response.id,
@@ -87,7 +92,7 @@ export const projectData = (response, array) => {
     image: 'nextjs.svg', //need to et this too from api
     description: response.description,
     tech: getArr(response.id, technologies),
-    updated: response.updated_at.slice(0, 10)
+    updated: getLastUpdated(response.updated_at.slice(0, 10))
   })
 
   return array

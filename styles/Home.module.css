@@ -167,6 +167,15 @@
   background: none;
 }
 
+.Cards {
+  border: 2px solid red;
+  max-width: auto;
+  padding: 40px
+}
+
+.updatedDate {
+  margin-left: 30px;
+}
 
 @media (max-width: 768px ) {
   .content {

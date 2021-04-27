@@ -38,7 +38,7 @@ const project = ({ projectArr }) => {
             calling extra attention to featured content or information.
           </p>
         </Jumbotron>
-        <div>
+        <div className={styles.Cards}>
           <CardDeck className={styles.Wrapper}>
             {projectArr.map(card => (
               <Cards key={card.id} data={card} />

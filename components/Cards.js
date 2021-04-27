@@ -80,7 +80,10 @@ const Cards = ({ data }) => {
                 data-inline='false'
               ></span>
               <small className='text-muted'>
-                Last updated on <strong>{data.updated}</strong>
+                Last updated on <br />
+                <span>
+                  <strong className={styles.updatedDate}>{data.updated}</strong>
+                </span>
               </small>
             </Col>
             <Col className={styles.cardlink} md={6}>
@@ -89,10 +92,13 @@ const Cards = ({ data }) => {
                 data-icon='logos:git'
                 data-inline='false'
               ></span>
+              <br />
               <small className='text-muted'>
-                <a target='_blank' href={data.repo}>
-                  <strong>Source Code</strong>
-                </a>
+                <span className={styles.updatedDate}>
+                  <a target='_blank' href={data.repo}>
+                    <strong>Source Code</strong>
+                  </a>
+                </span>
               </small>
             </Col>
           </Row>
