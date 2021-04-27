@@ -1,4 +1,5 @@
-import { CardDeck, Jumbotron } from 'react-bootstrap'
+import { Button, CardDeck, Jumbotron } from 'react-bootstrap'
+import Link from 'next/link'
 import Cards from '../components/Cards'
 import Layout from '../components/Layout'
 import styles from '../styles/Home.module.css'
@@ -29,7 +30,10 @@ export const getStaticProps = async () => {
 
 const project = ({ projectArr }) => {
   return (
-    <>
+    <div className={styles.Project}>
+      <Link href='/'>
+        <a>Go Back</a>
+      </Link>
       <Layout>
         <Jumbotron className={styles.jumboHeader}>
           <h1>Side Projects !</h1>
@@ -45,7 +49,7 @@ const project = ({ projectArr }) => {
           ))}
         </CardDeck>
       </Layout>
-    </>
+    </div>
   )
 }
 

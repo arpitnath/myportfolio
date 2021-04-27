@@ -180,6 +180,18 @@
   margin-left: 30px;
 }
 
+.Project{
+  padding: 20px;
+}
+
+.Project > a {
+  text-decoration: none;
+}
+
+.Col2 {
+  text-align: end;
+}
+
 @media (max-width: 768px ) {
   .content {
     margin-top: -10vh;
@@ -204,6 +216,21 @@
     grid-template-columns: 1fr;
     column-gap: 30px;
     position: relative;
+  }
+
+  .CardFooterContent {
+    display: none;
+  }
+
+  .cardlink {
+    margin-top: -30px;
+  }
+
+  
+
+  .jumboHeader {
+    width: 100%;
+    margin-left: 20%;
   }
   
   .footer {
