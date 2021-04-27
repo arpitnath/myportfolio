@@ -51,8 +51,7 @@ h1 {
 
 .sectionTechWrapper {
   width: inherit;
-  margin-left: auto;
-  margin-right: auto;
+  margin-left: -15px;
   display: flex;
 }
 
@@ -63,4 +62,7 @@ h1 {
     margin-right: auto;
     margin-top: 20vh;
   }
+  .sectionTechWrapper {
+    margin-left: 50px;
+ }
 }

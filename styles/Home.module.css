@@ -193,6 +193,9 @@
 }
 
 @media (max-width: 768px ) {
+  .Wrapper {
+    margin-left: 10rem;
+  }
   .content {
     margin-top: -10vh;
   }
