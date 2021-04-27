@@ -136,6 +136,11 @@ const technologies = [
         id: 4,
         title: 'Redux',
         icon: 'redux.svg'
+      },
+      {
+        id: 1,
+        title: 'Bootstrap',
+        icon: 'bootstrap.svg'
       }
     ]
   },
@@ -161,6 +166,11 @@ const technologies = [
         id: 0,
         title: 'reactJs',
         icon: 'react.svg'
+      },
+      {
+        id: 1,
+        title: 'css3',
+        icon: 'css.svg'
       }
     ]
   }

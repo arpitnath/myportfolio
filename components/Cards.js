@@ -5,7 +5,28 @@ const Cards = ({ data }) => {
   return (
     <>
       <Card className={styles.sharedCard}>
-        <Card.Img style={{ padding: '20px' }} variant='top' src={data.image} />
+        {(data.id === 359473391 && (
+          <Card.Img
+            style={{ padding: '20px', marginBottom: '-30px' }}
+            variant='top'
+            src='spacex.png'
+          />
+        )) ||
+          (data.id === 356618670 && (
+            <Card.Img
+              style={{ padding: '20px', marginBottom: '-30px' }}
+              variant='top'
+              src='portfolio.png'
+            />
+          )) ||
+          (data.id === 326847239 && (
+            <Card.Img
+              style={{ padding: '20px', marginBottom: '-30px' }}
+              variant='top'
+              src='cogs.png'
+            />
+          ))}
+
         <Card.Body>
           <Card.Title>{data.title}</Card.Title>
           <div className={styles.sectionWrapper}>
