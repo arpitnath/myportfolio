@@ -41,8 +41,9 @@ export const profileData = response => {
     bio: response.bio,
     imgUrl: response.avatar_url,
     resume: {
-      resumeQRCode: 'resumeqr.svg',
-      resumeUrl: 'https://qrgo.page.link/RZWai'
+      resumeQRCode: 'qr_resume.svg',
+      resumeUrl:
+        'https://drive.google.com/file/d/1RKv8kbf77Hr2jtpgwOV5x7gu2R6QkS2I/view?usp=sharing'
     },
     skills: [
       { title: 'ReactJS', icon: 'react.svg' },
