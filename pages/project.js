@@ -37,10 +37,12 @@ const project = ({ projectArr }) => {
       <Layout>
         <Jumbotron className={styles.jumboHeader}>
           <h1>Side Projects !</h1>
+          {/**
           <p>
             This is a simple hero unit, a simple jumbotron-style component for
             calling extra attention to featured content or information.
           </p>
+          */}
         </Jumbotron>
 
         <CardDeck className={styles.Wrapper}>
