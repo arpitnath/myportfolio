@@ -9,7 +9,7 @@ export const getStaticProps = async () => {
   var projectArr = []
   const repositories = ['myportfolio', 'cogs_of_life_project', 'spacex']
   await Promise.all(
-    repositories.map(async query => {
+    repositories.map(async (query) => {
       const response = await fetch(
         `https://api.github.com/repos/arpitnath/${query}`,
         api_config
@@ -40,7 +40,7 @@ const project = ({ projectArr }) => {
         </Jumbotron>
 
         <CardDeck className={styles.Wrapper}>
-          {projectArr.map(card => (
+          {projectArr.map((card) => (
             <Cards key={card.id} data={card} />
           ))}
         </CardDeck>

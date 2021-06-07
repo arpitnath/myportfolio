@@ -7,11 +7,11 @@ export const api_config = {
 
 function getArr(id, obj) {
   const arr = []
-  obj.find(item => (item.id === id ? arr.push(item.tech) : null))
+  obj.find((item) => (item.id === id ? arr.push(item.tech) : null))
   return arr.flat()
 }
 
-export const profileData = response => {
+export const profileData = (response) => {
   return {
     name: response.name,
     role: 'Frontend Developer',
@@ -52,11 +52,13 @@ export const profileData = response => {
       { title: 'ExpressJS', icon: 'express.svg' },
       { title: 'NodeJS', icon: 'nodejs.svg' },
       { title: 'JavaScript', icon: 'js.svg' },
+      { title: 'TypeScript', icon: 'ts.svg' },
       { title: 'python', icon: 'python.svg' },
       { title: 'MongoDb', icon: 'mongo.svg' },
       { title: 'PostGreSql', icon: 'psql.svg' },
       { title: 'Html5', icon: 'html.svg' },
       { title: 'css3', icon: 'css.svg' },
+      { title: 'Sass', icon: 'sass.svg' },
       { title: 'styled components', icon: 'styled.svg' }
     ],
     skills2: [
@@ -65,8 +67,7 @@ export const profileData = response => {
       { title: 'yarn', icon: 'yarn.svg' },
       { title: 'EsLint', icon: 'eslint.svg' },
       { title: 'Prettier', icon: 'prettier.svg' },
-      { title: 'TypeScript', icon: 'ts.svg' },
-      { title: 'Sass', icon: 'sass.svg' },
+
       { title: 'Redis', icon: 'redis.svg' },
       { title: 'Django', icon: 'django.svg' },
       { title: 'Webpack', icon: 'wbp.svg' },
@@ -112,6 +113,11 @@ const technologies = [
         id: 1,
         title: 'Bootstrap',
         icon: 'bootstrap.svg'
+      },
+      {
+        id: 2,
+        title: 'css3',
+        icon: 'css.svg'
       }
     ]
   },
@@ -175,8 +181,13 @@ const technologies = [
       },
       {
         id: 1,
-        title: 'css3',
-        icon: 'css.svg'
+        title: 'TypeScript',
+        icon: 'ts.svg'
+      },
+      {
+        id: 2,
+        title: 'Scss',
+        icon: 'sass.svg'
       }
     ]
   }

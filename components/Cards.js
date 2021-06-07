@@ -8,7 +8,10 @@ const Cards = ({ data }) => {
       <Card className={styles.sharedCard}>
         {(data.id === 359473391 && (
           <Card.Img
-            style={{ padding: '20px', marginBottom: '-30px' }}
+            style={{
+              padding: '20px',
+              marginBottom: '-30px'
+            }}
             variant='top'
             src='spacex.png'
           />
@@ -37,8 +40,7 @@ const Cards = ({ data }) => {
                   <span
                     className='iconify'
                     data-icon='whh:website'
-                    data-inline='false'
-                  ></span>
+                    data-inline='false'></span>
                   Live Demo
                 </a>
               </Col>
@@ -47,8 +49,7 @@ const Cards = ({ data }) => {
                   <span
                     className='iconify'
                     data-icon='logos:github-octocat'
-                    data-inline='false'
-                  ></span>
+                    data-inline='false'></span>
                   GitHub
                 </a>
               </Col>
@@ -68,8 +69,7 @@ const Cards = ({ data }) => {
                 <span
                   className='iconify'
                   data-icon='ant-design:field-time-outlined'
-                  data-inline='false'
-                ></span>
+                  data-inline='false'></span>
                 <small className='text-muted'>
                   Last updated on <br />
                   <span>
@@ -83,8 +83,7 @@ const Cards = ({ data }) => {
                 <span
                   className='iconify'
                   data-icon='logos:git'
-                  data-inline='false'
-                ></span>
+                  data-inline='false'></span>
                 <br />
                 <small className='text-muted'>
                   <span className={styles.updatedDate}>
