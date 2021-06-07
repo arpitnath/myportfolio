@@ -1,12 +1,9 @@
-
-
 .Wrapper {
   padding: 18rem;
   margin-top: -15rem;
   justify-content: center;
   align-items: center;
 }
-
 
 .SocialIcons {
   height: 90px;
@@ -22,14 +19,13 @@
 }
 
 .sharedCard {
-  height:600px;
-  width: 600px;
-  
+  height: 700px;
+  width: 400px;
 }
 
 .footer {
   margin-top: 5vh;
-} 
+}
 
 .role {
   padding: 50px;
@@ -40,7 +36,7 @@
 }
 
 .role > span {
-  padding: 10px 10px 10px 0 ;
+  padding: 10px 10px 10px 0;
 }
 
 .bio {
@@ -105,7 +101,7 @@
 
 .showSkills {
   border: none;
-  width:100%;
+  width: 100%;
   margin-top: 10px;
 }
 
@@ -113,11 +109,8 @@
   background-color: #6bb5fc;
 }
 
-
-
 .sectionContent {
   /* color: #f9826c; */
-  
 
   color: #ccc;
   display: inline-block;
@@ -135,35 +128,28 @@
   top: -3px;
   position: relative;
   margin-top: 10px;
-  
- 
-  
 }
-
 
 .techWrapper {
   width: 350px;
   display: flex;
   margin-top: 20px;
   position: relative;
-
 }
 
-.sectionContent  img {
+.sectionContent img {
   height: 30px;
   width: 30px;
   margin-bottom: 20px;
 }
 
 .skillTitle {
-  font-weight: bold; 
+  font-weight: bold;
 }
 
 .cardlink {
   text-align: end;
 }
-
-
 
 .cardDescription {
   margin: 10px 0;
@@ -175,12 +161,11 @@
   background: none;
 }
 
-
 .updatedDate {
   margin-left: 30px;
 }
 
-.Project{
+.Project {
   padding: 20px;
 }
 
@@ -192,7 +177,7 @@
   text-align: end;
 }
 
-@media (max-width: 768px ) {
+@media (max-width: 768px) {
   .Wrapper {
     margin-left: 10rem;
   }
@@ -210,12 +195,13 @@
     margin-left: auto;
     margin-right: auto;
   }
-  
+
   .displayPicture > img {
     margin-left: -25px;
   }
 
   .sharedCard {
+    width: 600px;
     grid-template-columns: 1fr;
     column-gap: 30px;
     position: relative;
@@ -229,18 +215,20 @@
     margin-top: -30px;
   }
 
-  
-
   .jumboHeader {
     width: 100%;
     margin-left: 20%;
   }
-  
+
+  .jumboHeader h1 {
+    text-align: center;
+  }
+
   .footer {
     margin-top: 50vh;
     width: 900px;
-  } 
+  }
   .footerContent {
-   margin-left: 100px;
-  } 
+    margin-left: 100px;
+  }
 }
