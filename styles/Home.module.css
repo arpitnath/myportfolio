@@ -137,6 +137,10 @@
   position: relative;
 }
 
+/* .sectionWrapper {
+  border: 2px solid red;
+} */
+
 .sectionContent img {
   height: 30px;
   width: 30px;
