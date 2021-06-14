@@ -30,7 +30,6 @@ h1 {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-
 }
 
 .text-muted {
@@ -44,9 +43,10 @@ h1 {
 
 .sectionWrapper {
   width: inherit;
-  margin-left: auto;
-  margin-right: auto;
-
+  margin-left: -2.6rem;
+  align-items: center;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
 }
 
 .sectionTechWrapper {
@@ -55,7 +55,7 @@ h1 {
   display: flex;
 }
 
-@media (max-width: 768px )  {
+@media (max-width: 768px) {
   .main {
     width: 900px;
     margin-left: auto;
@@ -64,5 +64,5 @@ h1 {
   }
   .sectionTechWrapper {
     margin-left: 50px;
- }
+  }
 }
