@@ -58,9 +58,9 @@ const Cards = ({ data }) => {
               {data.description}
             </Card.Text>
           </div>
-          <div className={styles.techWrapper}>
-            <Skills skills={data.tech} wrapper='sectionTechWrapper' />
-          </div>
+          <Skills skills={data.tech} wrapper='sectionWrapper' />
+          {/* <div className={styles.techWrapper}>
+          </div> */}
         </Card.Body>
         <Card.Footer>
           <Container>

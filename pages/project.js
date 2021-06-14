@@ -31,9 +31,9 @@ export const getStaticProps = async () => {
 const project = ({ projectArr }) => {
   return (
     <div className={styles.Project}>
-      <Link href='/'>
-        <a>Go Back</a>
-      </Link>
+      {/* <Link href='/'>
+        <a href='/'>Go Back</a>
+      </Link> */}
       <Layout>
         <Jumbotron className={styles.jumboHeader}>
           <h1>Side Projects !</h1>
